@@ -5,20 +5,15 @@ pipeline {
 
         stage('Build') {
             steps {
-                bat 'echo Building...'
+                bat 'C:\\Users\\family\\Maven\\apache-maven-3.9.12\\bin\\mvn.cmd clean compile'
             }
         }
 
         stage('Test') {
             steps {
-                bat 'echo Running tests...'
+                bat 'C:\\Users\\family\\Maven\\apache-maven-3.9.12\\bin\\mvn.cmd test'
             }
         }
 
-        stage('Deploy') {
-            steps {
-                bat 'echo Deploying...'
-            }
-        }
     }
 }
