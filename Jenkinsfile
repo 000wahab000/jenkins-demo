@@ -2,10 +2,22 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+
+        stage('Build') {
             steps {
-                bat 'echo Hello from Pipeline'
-                bat 'whoami'
+                bat 'echo Building...'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                bat 'echo Running tests...'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                bat 'echo Deploying...'
             }
         }
     }
